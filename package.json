@@ -1,0 +1,29 @@
+{
+  "name": "word-unscrambler",
+  "version": "1.0.2",
+  "description": "This package helps to unscramble any word as long as the word exists in the dictionary",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Octagon-simon/word-unscrambler.git"
+  },
+  "keywords": [
+    "scramble",
+    "unscrambler",
+    "letters",
+    "dictionary",
+    "word-unscrambler"
+  ],
+  "author": "Simon Ugorji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Octagon-simon/word-unscrambler/issues"
+  },
+  "homepage": "https://github.com/Octagon-simon/word-unscrambler#readme",
+  "dependencies": {
+    "an-array-of-english-words": "^2.0.0"
+  }
+}
