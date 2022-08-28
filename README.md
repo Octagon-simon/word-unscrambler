@@ -14,13 +14,14 @@ $ npm install word-unscrambler
 const unscramble = require('word-unscrambler');
 
 //syntax
-unscramble(scrambled_word: string, custom_dictionary: undefined).then( result => {
+unscramble(scrambled_word: string, custom_dictionary: array).then( result => {
     console.log(result);
 });
 
 ```
 
 ## HOW TO USE
+
 - Require the module
 - Invoke the function and pass in a scrambled word
 - Handle the result
@@ -40,7 +41,7 @@ unscramble("rgranomimpg").then( result => {
 
 This function returns an `array` containing the words that match the scrambled letters or an empty `array` if no words were found.
 
-So in your app, you can do something like this
+So in your app, you can check if the result (the array) contains items or not.
 
 ```javascript
 //require the module
@@ -60,6 +61,8 @@ unscramble("rgranomimpg").then( result => {
 ```
 
 ## CUSTOM DICTIONARY
+
+> The use of a custom dictionary is optional.
 
 If you have a custom dictionary that you would like to use, make sure the dictionary is an array containing the words to be filtered, then invoke the function like this.
 

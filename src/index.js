@@ -7,9 +7,9 @@ function is_array(ary){
 }
 
 //make the function async
-async function unscramble(word, custom_dict = undefined) {
+async function unscramble(word, custom_dict = []) {
     //check if it is an array
-    if(typeof custom_dict !== "undefined" && is_array(custom_dict)){
+    if(typeof custom_dict !== "undefined" && is_array(custom_dict) && custom_dict.length !== 0){
         dict = custom_dict;
     }
     //return the result
