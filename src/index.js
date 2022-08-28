@@ -1,7 +1,17 @@
 //require the dictionary
-const dict = require('an-array-of-english-words');
+let dict = require('an-array-of-english-words');
+
+//check if a variable is an array
+function is_array(ary){
+    return (Object.prototype.toString.call(ary) === '[object Array]');
+}
+
 //make the function async
-async function unscramble(word) {
+async function unscramble(word, custom_dict = undefined) {
+    //check if it is an array
+    if(typeof custom_dict !== "undefined" && is_array(custom_dict)){
+        dict = custom_dict;
+    }
     //return the result
     return (
         dict.filter(item => {
